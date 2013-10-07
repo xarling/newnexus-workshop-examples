@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Methode op controller</title>
+        <link rel="stylesheet" href="styles/bootstrap3/css/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body>
+        <div ng-app="myApp">
+
+            <div ng-controller="EersteCtrl" class="well">
+                <input type="text" ng-model="data.message"/>
+                <span>{{data.message}}</span>
+            </div>
+
+            <!--<div ng-controller="TweedeCtrl" class="well">
+                <span>{{reversedMsg()}}</span>
+            </div>-->
+
+            <div ng-controller="DerdeCtrl" class="well">
+                <span>{{reversedMsg(data.message)}}</span>
+                <br/>
+                <span>{{data.message|reverse|uppercase}}</span>
+            </div>
+        </div>
+
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/controller-method.js"></script>
+    </body>
+</html>
