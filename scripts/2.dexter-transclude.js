@@ -4,20 +4,22 @@ dexterApp.directive('dexter', function() {
 	return {
 		restrict: 'E',
 		scope: {
-          say: '@',
-          image: '@'
+          say: '@'
       	},
-		transclude: true,
+      	link: function($scope) {
+      		$scope.image = "styles/dexter.jpg";
+      	},
 		template: '<well><media class="blue"/></well>'
 	};
 }).directive('deedee', function() {
 	return {
 		restrict: 'E',
 		scope: {
-          image: '@',
           say: '@'
       	},
-		transclude: true,
+      	link: function($scope) {
+      		$scope.image = "styles/deedee.jpg";
+      	},
 		template: '<well><media class="pink"/></well>'
 	};
 }).directive('well', function() {
@@ -35,7 +37,6 @@ dexterApp.directive('dexter', function() {
 }).directive('media', function() {
 	return {
 		restrict: 'E',
-		transclude: true,
 		template: '<div class="media"> '+
 					'<a class="pull-left" href="#">'+
 				      '<img class="media-object" ng-src="{{image}}">'+
