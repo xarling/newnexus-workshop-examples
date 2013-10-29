@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <div ng-app="myApp">
+        <div ng-app="myApp" class="container">
 
             <div ng-controller="EersteCtrl" class="well">
                 <input type="text" ng-model="data.message"/>
@@ -20,11 +20,11 @@
                 <span>{{reversedMsg()}}</span>
             </div>-->
 
-            <div ng-controller="DerdeCtrl" class="well">
+            <!--<div ng-controller="DerdeCtrl" class="well">
                 <span>{{reversedMsg(data.message)}}</span>
                 <br/>
                 <span>{{data.message|reverse|uppercase}}</span>
-            </div>
+            </div>-->
         </div>
 
         <script src="scripts/angular.js"></script>

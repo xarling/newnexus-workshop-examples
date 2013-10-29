@@ -1,33 +1,32 @@
 var app = angular.module('myApp', []);
 
-app.factory('Data', function() {
-	return {message: "test"};
+app.factory('Data', function () {
+    return {message: "test"};
 });
 
-app.filter('reverse', function() {
-	return function(text) {
-		return text.split("").reverse().join("");
-}});
 
-function EersteCtrl($scope, Data) {
-	$scope.data = Data; 
-}
+app.controller('EersteCtrl', function ($scope, Data) {
+    $scope.data = Data;
+});
 
-function TweedeCtrl($scope, Data) {
-	$scope.data = Data;
+app.controller('TweedeCtrl', function ($scope, Data) {
+    $scope.data = Data;
+});
 
-	$scope.reversedMsg = function() {
-		return $scope.data.message.split("").reverse().join("");
-	};
-}
+app.controller('DerdeCtrl', function ($scope, Data) {
+    $scope.data = Data;
 
-function DerdeCtrl($scope, Data) {
-	$scope.data = Data;
+    $scope.reversedMsg = function (message) {
+        return message.split("").reverse().join("");
+    };
+});
 
-	$scope.reversedMsg = function(message) {
-		return message.split("").reverse().join("");
-	};
-}
+app.filter('reverse', function () {
+    return function (text) {
+        return text.split("").reverse().join("");
+    }
+});
+
 
 
 
