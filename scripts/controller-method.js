@@ -11,14 +11,19 @@ app.controller('EersteCtrl', function ($scope, Data) {
 
 app.controller('TweedeCtrl', function ($scope, Data) {
     $scope.data = Data;
+
+    $scope.reversedMsg = function () {
+        return $scope.data.message.split("").reverse().join("");
+    };
 });
 
 app.controller('DerdeCtrl', function ($scope, Data) {
     $scope.data = Data;
 
     $scope.reversedMsg = function (message) {
-        return message.split("").reverse().join("");
+        return $scope.data.split("").reverse().join("");
     };
+
 });
 
 app.filter('reverse', function () {
