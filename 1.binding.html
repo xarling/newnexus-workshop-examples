@@ -9,25 +9,26 @@
     </head>
 
     <body>
-       <!-- <div ng-app="">
-            <input type="text" ng-model="data.message"/>
-            <h1>{{data.message}}</h1>
-            {{"Hallo " + data.message}}
- 
-            <div class="{{data.message}}">
-                Lol met css
-            </div>
-       </div>-->
+        <div ng-app="" class="container">
+           <div ng-app="">
+                <input type="text" ng-model="data.message"/>
+                <h1>{{data.message}}</h1>
+                {{"Hallo " + data.message}}
+
+                <div class="{{data.message}}">
+                    Lol met css
+                </div>
+           </div>
 
 
-       <div ng-app="">
+       <!--
             <input type="text" ng-model="data.inputOne"/>
             <input type="text" ng-model="data.inputTwo"/>
             <br/>
             * : <span ng-class="{red: data.inputOne > 10, green: data.inputOne <= 10}">{{data.inputOne * data.inputTwo}}</span> <br/>
             / : {{data.inputOne / data.inputTwo}} <br/>
+             -->
        </div>
-
         <script src="scripts/angular.js"></script>
     </body>
 </html>
