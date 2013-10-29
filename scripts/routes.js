@@ -3,7 +3,7 @@
 var app = angular.module('routeApp', ['ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider
-            .when('/', {
+            .when('/view1', {
                 templateUrl: 'views/view1.html',
                 controller: 'MainCtrl'
             })
@@ -12,9 +12,12 @@ var app = angular.module('routeApp', ['ngRoute'])
                 controller: 'MainCtrl'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/view1'
             });
-    });
+    }).config(['$locationProvider', function ($location) {
+        $location.html5Mode(true).hashPrefix('!');
+    }]
+    );
 
 app.controller('MainCtrl', function($scope) {
 

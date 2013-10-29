@@ -10,8 +10,10 @@
 
     <body>
         <hr>
-        <div ng-app="routeApp">
-            <div class="container" ng-view=""></div>
+        <div ng-app="routeApp" class="container" >
+            [<a href="/view1">View 1</a>] [<a href="/view2">View 2</a>]
+            <hr/>
+            <div ng-view=""></div>
         </div>
         <script src="scripts/angular.js"></script>
         <script src="scripts/angular-route.js"></script>
